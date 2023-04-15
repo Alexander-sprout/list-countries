@@ -11,12 +11,12 @@ import { CountryItem } from './CountryItem'
 
 export const CountriesList = () => {
     const [countryList, setCountryList] = React.useState<Country[]>([])
-    const countries = useAppSelector(({ countriesByRegion }) => countriesByRegion.countries)
-    const resultSearchCountry = useAppSelector(({ searchCountry }) => searchCountry.countries)
     const { allCountries, loading } = useAppSelector(({ allCountries }) => ({
         allCountries: allCountries.countries,
         loading: allCountries.loading
     }))
+    const countries = useAppSelector(({ countriesByRegion }) => countriesByRegion.countries)
+    const resultSearchCountry = useAppSelector(({ searchCountry }) => searchCountry.countries)
     const allCouinriesIsAdd = useAppSelector(({ allCountries }) => allCountries.countriesIsAdd)
     const favoriteCountry = useAppSelector(({ favoriteCountries }) => favoriteCountries.favorites)
     const dispatch = useAppDispatch()

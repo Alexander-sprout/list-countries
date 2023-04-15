@@ -10,10 +10,9 @@ import styled from 'styled-components/native'
 
 
 
+const Stack = createNativeStackNavigator()
 
 export default function App() {
-  const Stack = createNativeStackNavigator()
-
   return (
     <SafeArea>
       <Provider store={store}>
